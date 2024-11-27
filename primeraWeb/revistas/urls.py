@@ -1,11 +1,8 @@
 
 #creamos la vista y url
-from django.contrib import admin
-from django.urls import path, include
-from revistas import views  # Importa las vistas de la app revistas
+from django.urls import path
+from . import views  # Importa tus vistas correctamente
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.inicio, name='inicio'),  # Configura la raíz para redirigir a /libros/
-    path('libros/', include('revistas.urls')),
+    path('', views.lista_libros, name='lista_libros'),  # Asegúrate de no usar include aquí
 ]
