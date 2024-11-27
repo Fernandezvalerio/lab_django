@@ -20,3 +20,11 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+#creamos la vista y url
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('libros/', views.lista_libros, name='lista_libros'),
+]
