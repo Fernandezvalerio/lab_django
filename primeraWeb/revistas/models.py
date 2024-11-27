@@ -8,6 +8,7 @@ class Libro(models.Model):
     titulo = models.CharField(max_length=255)
     autor = models.CharField(max_length=255)
     fecha_publicacion = models.DateField()
+    genero = models.CharField(max_length=100, blank=True, null=True)  # Nuevo campo
 
     def __str__(self):
         return self.titulo
