@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Libros</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Reseñas de Libros</h1>
+    </header>
+    <main>
+        <h2>Lista de Libros</h2>
+        <ul>
+            {% for libro in libros %}
+                <li>
+                    <strong>{{ libro.titulo }}</strong> - {{ libro.autor }} <br>
+                    Género: {{ libro.genero }} <br>
+                    Publicado el: {{ libro.fecha_publicacion }}
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        <p>© 2024 - Mi Proyecto Django</p>
+    </footer>
+</body>
+</html>
